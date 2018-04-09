@@ -14,28 +14,22 @@
             background-color: yellow;
             width: 100%;
         }
-        #a { 
+        .a {
+            border: solid red 2px; 
             display: flex; 
             flex-direction: column;
             width: 100%;
         }
         .adv {            
             background-color: rgb(26, 73, 104);
-            width: 200px;
-            height: 100px;
+            width: 250px;
+            height: 150px;
             border: 1px solid;
-            flex: 0 0 200px;
+            flex: 0 0 250px;
             margin: 10px;
             font-size: 1.2em;
             
-        }
-        /* #b {
-            display: flex;
-            flex: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            padding: 0 10px;
-        } */
+        }        
         ul {
             background-color: rgb(69, 170, 157);
             display: flex;
@@ -47,20 +41,32 @@
             padding: 0;
             align-items: center;            
         }
-        #manu {            
+        .manu {            
             color: white;
             flex-grow: 1;
             font-size: 1.3em;
             margin-left: 10vw;            
         }
-        #manu4 {            
+        .manu2 {            
+            color: white;
+            flex-grow: 1;
+            font-size: 1.3em;
+            margin-left: 10vw;            
+        }
+        .manu3 {            
+            color: white;
+            flex-grow: 1;
+            font-size: 1.3em;
+            margin-left: 10vw;            
+        }
+        .manu4 {            
             color: white;
             flex-grow: 1;
             text-align: right;
             font-size: 1.3em;
             margin-right: 10vw; 
         }
-        #kontaktai {
+        .kontaktai {
             color: white;
             background-color: rgb(101, 99, 202);
             width: 100%;
@@ -70,7 +76,7 @@
             justify-content: center;
             font-size: 1.3em;
         }
-        #tekstas {
+        .tekstas {
             width: 100%;
             margin-top: 1%;
             color: white;
@@ -80,36 +86,67 @@
         p {
             margin-left: 4%;
         }
-        #reklamos {
+        .reklamos {
             display: flex;
             flex: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            padding: 0 10px;
-            /* width: 100%; */
+            padding: 0 10px;            
+        }
+        @media (max-width: 768px) {
+            .manu2, .manu3 {
+                display: none;            
+            }
+            .a { 
+            border: solid red 2px; 
+            display: flex; 
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        }
+        @media (min-width: 768px) {            
+            .reklamos {
+            display: flex;            
+            flex-direction: column;            
+            justify-content: space-evenly;
+            padding: 0 10px;            
+        }   
+        .tekstas {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-top: 1%;
+            color: white;
+            background-color: rgb(48, 133, 48);   
+            font-size: 1em;                    
+        }                   
+        
         }
     
     </style>
 
 </head>
 <body>
-    <div id="a">
+    <div class="a">
         
             <ul>
-                <li id="manu">manu</li>
-                <li id="manu4">manu4</li>
+                <li class="manu">manu</li>
+                <li class="manu2">manu2</li>
+                <li class="manu3">manu3</li>
+                <li class="manu4">manu4</li>
             </ul>
         
-        <div id="tekstas"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem inventore ratione accusantium vel sed odio eius possimus quas molestias! Voluptatum, est. Neque, tempora harum dolorum aut tenetur saepe blanditiis sed. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem inventore ratione accusantium vel sed odio eius possimus quas molestias! Voluptatum, est. Neque, tempora harum dolorum aut tenetur saepe blanditiis sed. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem inventore ratione accusantium vel sed odio eius possimus quas molestias! Voluptatum, est. Neque, tempora harum dolorum aut tenetur saepe blanditiis sed.</p></div>
+        <div class="tekstas"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem inventore ratione accusantium vel sed odio eius possimus quas molestias! Voluptatum, est. Neque, tempora harum dolorum aut tenetur saepe blanditiis sed. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem inventore ratione accusantium vel sed odio eius possimus quas molestias! Voluptatum, est. Neque, tempora harum dolorum aut tenetur saepe blanditiis sed. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem inventore ratione accusantium vel sed odio eius possimus quas molestias! Voluptatum, est. Neque, tempora harum dolorum aut tenetur saepe blanditiis sed.</p></div>
 
-        <div id="reklamos">
+        <div class="reklamos">
             <div class="adv">reklama1</div>
             <div class="adv">reklama2</div>
             <div class="adv">reklama3</div>
             <div class="adv">reklama4</div>
         </div>
 
-        <div id="kontaktai">kontaktai</div>
+        <div class="kontaktai">kontaktai</div>
 
     </div>
 </body>
